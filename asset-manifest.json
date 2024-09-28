@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/pocoryanse-web/static/css/main.285cf2d0.css",
+    "main.js": "/pocoryanse-web/static/js/main.d94dfafd.js",
+    "static/js/453.f2ff5365.chunk.js": "/pocoryanse-web/static/js/453.f2ff5365.chunk.js",
+    "static/media/top.JPG": "/pocoryanse-web/static/media/top.cb93d564ee25c62a23be.JPG",
+    "index.html": "/pocoryanse-web/index.html",
+    "main.285cf2d0.css.map": "/pocoryanse-web/static/css/main.285cf2d0.css.map",
+    "main.d94dfafd.js.map": "/pocoryanse-web/static/js/main.d94dfafd.js.map",
+    "453.f2ff5365.chunk.js.map": "/pocoryanse-web/static/js/453.f2ff5365.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.285cf2d0.css",
+    "static/js/main.d94dfafd.js"
+  ]
+}
