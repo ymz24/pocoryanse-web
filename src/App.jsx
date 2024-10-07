@@ -1,16 +1,16 @@
-import './App.css';
+import "./App.css";
+import Menu from "./Menu";
+import TopHeader from "./TopHeader";
 
 function App() {
   return (
     <div className="App">
-      <header>
-      </header>
+      <TopHeader />
+      <Menu />
       <body>
-        <div className="absolute bg-black w-full h-full bg-opacity-40 animate-text-focus-in" />
-        <div className="bg-[url('./images/top.JPG')] bg-center bg-cover h-screen flex items-center justify-center">
-          <div className="animate-text-focus-in text-white text-5xl">
-            Pocoryanse!
-          </div>
+        <div className="bg-white h-1/2">
+          <h1 className="text-4xl">Wellcome to Pocoryanse-web!!</h1>
+          {/* <p>桒野歩夢、能美泰成、三谷一晴、柳井一真、山崎翔矢の5人からなるグループのいろいろをまとめたサイトです。</p>  */}
         </div>
       </body>
     </div>
