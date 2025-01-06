@@ -5,10 +5,13 @@ import Menu from "./Menu";
 
 const TopHeader = () => {
     return (
-        <div className="bg-base-100 h-300">
+        <nav classNameName="bg-gray-200">
+            <div classNameName="flex flex-wrap items-center">
+                <span classNameName="flex items-center">Pocoryanse</span>
+                
+            </div>
             <Menu />
-            <span className="flex justify-center">Pocoryanse-web</span>
-        </div>
+        </nav>
     );
 };
 

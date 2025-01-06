@@ -9,16 +9,18 @@ const Home = () => {
         <div>
             <TopHeader />
             <div className="z-0">
-                <div className="absolute bg-black w-full h-screen bg-opacity-40 animate-text-focus-in" />
-                <div className="bg-[url('./images/top.JPG')] bg-contain bg-cover h-screen flex items-center justify-center bg-fixed">
-                    <div className="animate-text-focus-in text-white text-5xl">
-                        Pocoryanse!
+                <div className="absolute bg-black w-full h-screen bg-opacity-40 hidden sm:flex animate-text-focus-in" />
+                <div className="bg-[url('./images/top.JPG')] bg-center bg-cover w-full hidden sm:flex h-screen items-center justify-center bg-fixed">
+                    <div className="animate-text-focus-in text-white text-5xl font-bold">
+                        Hi there!
+                    </div>
+                    <div className="text-center py-6">
+                        This web site is summarize various things of Pocoryanse.
                     </div>
                 </div>
             </div>
-            <div className="bg-base-200 h-1/2">
-                <h1 className="text-4xl">Wellcome to Pocoryanse-web!!</h1>
-                <p>桒野歩夢、能美泰成、三谷一晴、柳井一真、山崎翔矢の5人からなるグループのいろいろをまとめたサイトです。</p>
+            <div className="text-5xl font-bold justify-center flex sm:hidden animate-text-focus-in">
+                Hi There!
             </div>
             <Footer />
       </div>

@@ -20,6 +20,7 @@ const Menu = () => {
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/History">History</Link></li>
                 <li><Link to="/Movies">Movies</Link></li>
+                <li><Link to="/Members">Members</Link></li>
             </ul>
         </div>
     );

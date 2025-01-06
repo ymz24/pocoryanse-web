@@ -10,7 +10,7 @@ const Movies = () => {
             <div className="grid grid-cols-1 sm:grid-cols-3">
                 <div className="card bg-base-100 w-full shadow-xl animate-text-focus-in">
                     <figure>
-                        <img className="h-full w-full" src="https://i9.ytimg.com/vi/4nztVfJqDU8/maxresdefault.jpg?v=66e02220&sqp=CMD2xroG&rs=AOn4CLDZHpELUZYDWYwk_71F89_4TEE7gg" />
+                        {/* <img className="h-full w-full" src="https://i9.ytimg.com/vi/4nztVfJqDU8/maxresdefault.jpg?v=66e02220&sqp=CMD2xroG&rs=AOn4CLDZHpELUZYDWYwk_71F89_4TEE7gg" /> */}
                     </figure>
                     <div className="card-body">
                         <h2 className="card-title">Pocoryanse '24 Summer Trip in Kagoshima</h2>
@@ -23,7 +23,7 @@ const Movies = () => {
                 </div>
                 <div className="card bg-base-100 w-full shadow-xl animate-text-focus-in">
                     <figure>
-                        <img className="h-full w-full" src="https://i9.ytimg.com/vi_webp/hcOCKpNWEbY/maxresdefault.webp?v=6686881a&sqp=CLzvxroG&rs=AOn4CLCGtWYc_P4_hzziEi0BQlgHATgUqg" />
+                        {/* <img className="h-full w-full" src="https://i9.ytimg.com/vi_webp/hcOCKpNWEbY/maxresdefault.webp?v=6686881a&sqp=CLzvxroG&rs=AOn4CLCGtWYc_P4_hzziEi0BQlgHATgUqg" /> */}
                     </figure>
                     <div className="card-body">
                         <h2 className="card-title">第一回社会人同窓会人狼【VLogもあるヨ！】</h2>
@@ -36,7 +36,7 @@ const Movies = () => {
                 </div>
                 <div className="card bg-base-100 w-full shadow-xl animate-text-focus-in">
                     <figure>
-                        <img className="h-full w-full" src="https://i9.ytimg.com/vi/XSpyuz0Haf0/maxresdefault.jpg?v=65ed0434&sqp=COjxxroG&rs=AOn4CLACxQVAMNShsRUGCxSPlwBA_zZSgg" />
+                        {/* <img className="h-full w-full" src="https://i9.ytimg.com/vi/XSpyuz0Haf0/maxresdefault.jpg?v=65ed0434&sqp=COjxxroG&rs=AOn4CLACxQVAMNShsRUGCxSPlwBA_zZSgg" /> */}
                     </figure>
                     <div className="card-body">
                         <h2 className="card-title">KINNIKU Kyoto-Shiga Trip 2024</h2>
@@ -49,7 +49,7 @@ const Movies = () => {
                 </div>
                 <div className="card bg-base-100 w-full shadow-xl animate-text-focus-in">
                     <figure>
-                        <img className="h-full w-full" src="https://i9.ytimg.com/vi_webp/0YLeWvNrvGo/mqdefault.webp?v=65a92b67&sqp=CJT0xroG&rs=AOn4CLCxNrBaAx9792RkyZ_uVl0gz-4BGg" />
+                        {/* <img className="h-full w-full" src="https://i9.ytimg.com/vi_webp/0YLeWvNrvGo/mqdefault.webp?v=65a92b67&sqp=CJT0xroG&rs=AOn4CLCxNrBaAx9792RkyZ_uVl0gz-4BGg" /> */}
                     </figure>
                     <div className="card-body">
                         <h2 className="card-title">2023-2024 KINNIKU Return to Fukuoka</h2>
