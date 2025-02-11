@@ -2,6 +2,7 @@ import React from "react";
 import "../App.css";
 
 import TopHeader from "./TopHeader";
+import Footer from "./Footer";
 
 const History = () => {
     return (
@@ -92,6 +93,7 @@ const History = () => {
                     </div>
                 </li>
             </ul>
+            <Footer />
         </div>
     );
 }
