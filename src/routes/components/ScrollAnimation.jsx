@@ -1,6 +1,5 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
-import "../App.css";
 
 const ScrollAnimation = ({ elem, animation }) => {
     const { ref, inView } = useInView({
