@@ -1,7 +1,7 @@
 import React from "react";
 import "../App.css";
 
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 const Menu = () => {
     return (
@@ -9,8 +9,8 @@ const Menu = () => {
             <svg
                 className="fill-current fill-black btn btn-ghost btn-square"
                 xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
+                width="24"
+                height="24"
                 viewBox="0 0 512 512"
                 tabIndex={0}
                 role="button">

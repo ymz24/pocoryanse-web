@@ -3,11 +3,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      backgroundImage: {
-        'top': "url('/imgs/top.PNG')",
-      },
       animation: {
-        "text-focus-in": "text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530)   both"
+        "text-focus-in": "text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530)   both",
+        "fade-in-bottom": "fade-in-bottom 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000)    "
       },
       keyframes: {
         "text-focus-in": {
@@ -20,10 +18,23 @@ module.exports = {
             opacity: "1"
           },
         },
+        "fade-in-bottom": {
+          "0%": {
+              transform: "translateY(50px)",
+              opacity: "0"
+          },
+          to: {
+              transform: "translateY(0)",
+              opacity: "1"
+          }
+        },
       },
     },
   },
   plugins: [
     require('daisyui'),
   ],
+  daisyui: {
+    themes: ["forest"],
+  },
 }
