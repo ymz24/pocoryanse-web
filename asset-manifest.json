@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/pocoryanse-web/static/css/main.11518221.css",
-    "main.js": "/pocoryanse-web/static/js/main.74482047.js",
+    "main.css": "/pocoryanse-web/static/css/main.d4207713.css",
+    "main.js": "/pocoryanse-web/static/js/main.cd0e35a4.js",
     "static/js/453.f2ff5365.chunk.js": "/pocoryanse-web/static/js/453.f2ff5365.chunk.js",
-    "static/media/top.JPG": "/pocoryanse-web/static/media/top.cb93d564ee25c62a23be.JPG",
     "index.html": "/pocoryanse-web/index.html",
-    "main.11518221.css.map": "/pocoryanse-web/static/css/main.11518221.css.map",
-    "main.74482047.js.map": "/pocoryanse-web/static/js/main.74482047.js.map",
+    "main.d4207713.css.map": "/pocoryanse-web/static/css/main.d4207713.css.map",
+    "main.cd0e35a4.js.map": "/pocoryanse-web/static/js/main.cd0e35a4.js.map",
     "453.f2ff5365.chunk.js.map": "/pocoryanse-web/static/js/453.f2ff5365.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.11518221.css",
-    "static/js/main.74482047.js"
+    "static/css/main.d4207713.css",
+    "static/js/main.cd0e35a4.js"
   ]
 }
