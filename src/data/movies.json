@@ -82,5 +82,12 @@
         "season" : "2025年春",
         "description" : "メンバーで最長の旅行。名古屋と三重のグルメを堪能します。",
         "url" : "https://youtu.be/ppqVMQaxOe4"
+    },
+    {
+        "image" : "./images/miyazaki2.png",
+        "title" : "Miyazaki Trip by Pocoryanse",
+        "season" : "2025年GW",
+        "description" : "メンバー全員で宮崎リベンジへ。前回よりさらにグレードアップした旅行をお届けします。",
+        "url" : "https://youtu.be/x01nIf4ct8A"
     }
 ]

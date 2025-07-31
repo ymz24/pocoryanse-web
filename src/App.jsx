@@ -6,6 +6,8 @@ import { BrowserRouter } from "react-router-dom";
 import Home from "./routes/Home";
 import History from "./routes/History";
 import Movies from "./routes/Movies";
+import HotSprings from "./routes/HotSprings";
+import RankingRegister from "./routes/RankingRegister";
 
 function App() {
   return (
@@ -14,6 +16,9 @@ function App() {
         <Route path="/" element={ <Home /> } />
         <Route path="/history" element={ <History /> } />
         <Route path="/Movies" element={ <Movies /> } />
+        <Route path="/HotSprings" element={ <HotSprings /> } />
+        <Route path="/RankingRegister" element={ <RankingRegister /> } />
+        {/* ここに他のルートを追加できます */}
       </Routes>
     </BrowserRouter>
   );

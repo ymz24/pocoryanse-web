@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../App.css";
 
-import Menu from "./Menu";
 import { Link } from 'react-router-dom';
 
 const TopHeader = () => {
@@ -25,6 +24,7 @@ const TopHeader = () => {
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/history">History</Link></li>
                         <li><Link to="/movies">Movies</Link></li>
+                        <li><Link to="/HotSprings">HotSprings</Link></li>
                     </ul>
                 </div>
                 
@@ -82,7 +82,7 @@ const TopHeader = () => {
                         <h2 className="text-xl font-bold pl-4 text-left ml-2">Menu</h2>
                     </div>
                     <ul key={isDrawerOpen ? "open" : "closed"} className="p-4 ml-2 font-bold">
-                        {["Home", "History", "Movies"].map((link, index) => (
+                        {["Home", "History", "Movies", "HotSprings"].map((link, index) => (
                             <li
                                 key={index}
                                 className={`py-2 opacity-0 animate-fade-in`}
