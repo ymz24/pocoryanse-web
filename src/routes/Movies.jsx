@@ -10,7 +10,9 @@ import movies from "../data/movies.json";
 
 const createMovieCardsList = () => {
     const list = [];
-    for (const movieInfo of movies) {
+    // movies.jsonの内容を逆順に表示
+    for (let i = movies.length - 1; i >= 0; i--) {
+        const movieInfo = movies[i];
         list.push(<ScrollAnimation    
             elem={
                 <MovieCards
@@ -21,7 +23,7 @@ const createMovieCardsList = () => {
                     url={movieInfo.url}
                 />
             }
-            animation="animate-text-focus-in"
+            animation="fade-in-bottom"
         />);
     }
     return <>{list}</>;
@@ -31,8 +33,11 @@ const Movies = () => {
     return (
         <div>
             <TopHeader />
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 pl-5 pr-5 bg-base-200">
-                    {createMovieCardsList()}
+                <div className="pt-10">
+                    {/* スマホの場合縦一列で横幅いっぱい, PC表示の場合縦横5pxずつ開けた3行表示 */}
+                    <div className="grid lg:grid-cols-3 sm:grid-cols-1 gap-5 lg:pl-5 lg:pr-5 bg-base-200 pt-5">
+                        {createMovieCardsList()}
+                    </div>
                 </div>
             <Footer />
         </div>

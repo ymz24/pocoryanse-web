@@ -5,7 +5,8 @@ module.exports = {
     extend: {
       animation: {
         "text-focus-in": "text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530)   both",
-        "fade-in-bottom": "fade-in-bottom 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000)    "
+        "fade-in-bottom": "fade-in-bottom 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000)   both",
+        "fade-in": "fade-in 0.5s ease-in forwards",
       },
       keyframes: {
         "text-focus-in": {
@@ -28,13 +29,25 @@ module.exports = {
               opacity: "1"
           }
         },
+        "fade-in": {
+          "0%": {
+              opacity: "0"
+          },
+          to: {
+              opacity: "1"
+          }
+        }
+      },
+      transitionDuration: {
+        "1500": "1500ms",
       },
     },
   },
   plugins: [
     require('daisyui'),
+    require('tailwind-hamburgers'),
   ],
   daisyui: {
-    themes: ["forest"],
+    themes: ["corporate"],
   },
 }

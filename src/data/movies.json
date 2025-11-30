@@ -1,66 +1,10 @@
 [
     {
-        "image" : "./images/2025NY.png",
-        "title" : "DOSOKAI New Year Trip 2025",
-        "season" : "2025年年始",
-        "description" : "過去一体を動かした旅行。前日に急遽決定した阿蘇で自然を満喫します。",
-        "url" : "https://youtu.be/qrIOQURrGjw"
-    },
-    {
-        "image" : "./images/kagoshima.png",
-        "title" : "Pocoryanse '24 Summer Trip in Kagoshima",
-        "season" : "2024年夏",
-        "description" : "新たにPocoryanseと名乗る5人は綿密に計画を立て、鹿児島へ1泊2日の旅行へ向かう。",
-        "url" : "https://youtu.be/4nztVfJqDU8"
-    },
-    {
-        "image" : "./images/24GW.png",
-        "title" : "第一回社会人同窓会人狼【VLogもあるヨ！】",
-        "season" : "2024年GW",
-        "description" : "同窓会メンバーで糸島へ。夜は定番の人狼ゲームを楽しみます。",
-        "url" : "https://youtu.be/hcOCKpNWEbY"
-    },
-    {
-        "image" : "./images/kyoto-shiga.png",
-        "title" : "KINNIKU Kyoto-Shiga Trip 2024",
-        "season" : "2024年春",
-        "description" : "このメンバーでは2回目の京都へ。今回は滋賀も訪れるため\"新鮮\"な旅となるはず。",
-        "url" : "https://youtu.be/XSpyuz0Haf0"
-    },
-    {
-        "image" : "./images/23-24.png",
-        "title" : "2023-2024 KINNIKU Return to Fukuoka",
-        "season" : "2024年年始",
-        "description" : "毎年恒例年末年始集会。地元福岡での集会だし、全員集合できるよね。",
-        "url" : "https://youtu.be/0YLeWvNrvGo"
-    },
-    {
-        "image" : "./images/yamamoto.png",
-        "title" : "山本×岸田ゲーム【神ゲー】",
-        "season" : "2024年年始",
-        "description" : "しっぽり飲みの予定でしたが、不意に神ゲーが誕生しました。",
-        "url" : "https://youtu.be/fqQVJQJiqro"
-    },
-    {
-        "image" : "./images/kamakura.png",
-        "title" : "2023 Autumn Petit Trip",
-        "season" : "2023年秋",
-        "description" : "関東で大人気の観光地、鎌倉へとゆったり秋旅を満喫します。",
-        "url" : "https://youtu.be/eBxD9-922rE"
-    },
-    {
-        "image" : "./images/yobuko.png",
-        "title" : "2023 Summer Vacation",
-        "season" : "2023年夏",
-        "description" : "バーベキューやカラオケ、天拝の郷など夏の地元を堪能。",
-        "url" : "https://youtu.be/Cgq_vIAQaGo"
-    },
-    {
-        "image" : "./images/dosokaiKyoto.jpg",
-        "title" : "DOSOKAI Graduation Trip in Kyoto",
-        "season" : "2023年春",
-        "description" : "卒業旅行は皆で京の都へ大名行列。",
-        "url" : "https://youtu.be/EMgwZPXcTeo"
+        "image" : "./images/miyazaki.png",
+        "title" : "grulior summer trip in Miyazaki",
+        "season" : "2022年夏",
+        "description" : "宮崎にゆかりのある人は欠席となったが、歴史的なイベントも同時に起こる。記念すべき初VLog",
+        "url" : "https://youtu.be/56gbSORa5fg"
     },
     {
         "image" : "./images/kanazawa.png",
@@ -70,10 +14,80 @@
         "url" : "https://youtu.be/fhzUCcW0Gak"
     },
     {
-        "image" : "./images/miyazaki.png",
-        "title" : "grulior summer trip in Miyazaki",
-        "season" : "2022年夏",
-        "description" : "宮崎にゆかりのある人は欠席となったが、歴史的なイベントも同時に起こる。記念すべきVLog",
-        "url" : "https://youtu.be/56gbSORa5fg"
+        "image" : "./images/dosokaiKyoto.jpg",
+        "title" : "DOSOKAI Graduation Trip in Kyoto",
+        "season" : "2023年春",
+        "description" : "卒業旅行は皆で京の都へ大名行列。",
+        "url" : "https://youtu.be/EMgwZPXcTeo"
+    },
+    {
+        "image" : "./images/yobuko.png",
+        "title" : "2023 Summer Vacation",
+        "season" : "2023年夏",
+        "description" : "バーベキューやカラオケ、天拝の郷など夏の地元を堪能。",
+        "url" : "https://youtu.be/Cgq_vIAQaGo"
+    },
+    {
+        "image" : "./images/kamakura.png",
+        "title" : "2023 Autumn Petit Trip",
+        "season" : "2023年秋",
+        "description" : "関東で大人気の観光地、鎌倉へとゆったり秋旅を満喫します。",
+        "url" : "https://youtu.be/eBxD9-922rE"
+    },
+    {
+        "image" : "./images/yamamoto.png",
+        "title" : "山本×岸田ゲーム【神ゲー】",
+        "season" : "2024年年始",
+        "description" : "しっぽり飲みの予定でしたが、不意に神ゲーが誕生しました。",
+        "url" : "https://youtu.be/fqQVJQJiqro"
+    },
+    {
+        "image" : "./images/23-24.png",
+        "title" : "2023-2024 KINNIKU Return to Fukuoka",
+        "season" : "2024年年始",
+        "description" : "毎年恒例年末年始集会。地元福岡での集会だし、全員集合できるよね。",
+        "url" : "https://youtu.be/0YLeWvNrvGo"
+    },
+    {
+        "image" : "./images/kyoto-shiga.png",
+        "title" : "KINNIKU Kyoto-Shiga Trip 2024",
+        "season" : "2024年春",
+        "description" : "このメンバーでは2回目の京都へ。今回は滋賀も訪れるため\"新鮮\"な旅となるはず。",
+        "url" : "https://youtu.be/XSpyuz0Haf0"
+    },
+    {
+        "image" : "./images/24GW.png",
+        "title" : "第一回社会人同窓会人狼【VLogもあるヨ！】",
+        "season" : "2024年GW",
+        "description" : "同窓会メンバーで糸島へ。夜は定番の人狼ゲームを楽しみます。",
+        "url" : "https://youtu.be/hcOCKpNWEbY"
+    },
+    {
+        "image" : "./images/kagoshima.png",
+        "title" : "Pocoryanse '24 Summer Trip in Kagoshima",
+        "season" : "2024年夏",
+        "description" : "新たにPocoryanseと名乗る5人は綿密に計画を立て、鹿児島へ1泊2日の旅行へ向かう。",
+        "url" : "https://youtu.be/4nztVfJqDU8"
+    },
+    {
+        "image" : "./images/2025NY.png",
+        "title" : "DOSOKAI New Year Trip 2025",
+        "season" : "2025年年始",
+        "description" : "過去一体を動かした旅行。前日に急遽決定した阿蘇で自然を満喫します。",
+        "url" : "https://youtu.be/qrIOQURrGjw"
+    },
+    {
+        "image" : "./images/NagoyaMie.png",
+        "title" : "Nagoya & Mie Trip by Pocoryanse",
+        "season" : "2025年春",
+        "description" : "メンバーで最長の旅行。名古屋と三重のグルメを堪能します。",
+        "url" : "https://youtu.be/ppqVMQaxOe4"
+    },
+    {
+        "image" : "./images/miyazakiRevenge.png",
+        "title" : "Miyazaki Trip by Pocoryanse",
+        "season" : "2025年GW",
+        "description" : "メンバー全員で宮崎リベンジへ。前回よりさらにグレードアップした旅行をお届けします。",
+        "url" : "https://youtu.be/x01nIf4ct8A"
     }
 ]
