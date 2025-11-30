@@ -13,7 +13,6 @@ const initialState = {
     bedrock: 0,
     rest: 0,
     cost: 0,
-    dining: 0,
     bonus: 0,
     total: 0,
 };
@@ -21,6 +20,18 @@ const initialState = {
 const RankingRegister = () => {
     const [formData, setFormData] = useState(initialState);
     const [loading, setLoading] = useState(false);
+
+    // フォーム定義を配列化して繰り返しで描画
+    const fields = [
+        { name: 'name', label: '施設名称', type: 'text', placeholder: '能美の湯', cols: 'sm:col-span-2' },
+        { name: 'spa', label: '温泉', type: 'number', min: 0, max: 20 },
+        { name: 'sauna', label: 'サウナ', type: 'number', min: 0, max: 15 },
+        { name: 'bedrock', label: '岩盤浴', type: 'number', min: 0, max: 15 },
+        { name: 'rest', label: '休憩所・館内', type: 'number', min: 0, max: 15 },
+        { name: 'cost', label: 'コスト', type: 'number', min: 0, max: 15 },
+        { name: 'bonus', label: '能美ボーナス', type: 'number', min: 0, max: 20 },
+        { name: 'total', label: '総合点数', type: 'number', disabled: true },
+    ];
 
     const handleChange = (e) => {
         const { name, value, type } = e.target;
@@ -30,7 +41,7 @@ const RankingRegister = () => {
             // 対象の入力値を更新
             const updatedData = { ...prevData, [name]: newVal };
             // 合計を算出する数値フィールド
-            const numericKeys = ['spa', 'sauna', 'bedrock', 'rest', 'cost', 'dining', 'bonus'];
+            const numericKeys = ['spa', 'sauna', 'bedrock', 'rest', 'cost', 'bonus'];
             // 各キーの値を合算（未入力の場合は 0 とする）
             const total = numericKeys.reduce((sum, key) => sum + (Number(updatedData[key]) || 0), 0);
             updatedData.total = total;
@@ -43,7 +54,15 @@ const RankingRegister = () => {
         setLoading(true);
         console.log('Submitting form data:', formData);
         try {
-            const params = new URLSearchParams(formData);
+            // fields に定義したキーだけを送る（不要キーを排除）
+            const payload = fields.reduce((acc, f) => {
+                // f.name が存在する formData の値のみ追加（undefined を送らない）
+                const val = formData[f.name];
+                if (typeof val !== 'undefined') acc[f.name] = String(val);
+                return acc;
+            }, {});
+
+            const params = new URLSearchParams(payload).toString();
             const response = await fetch(API_URL, {
                 method: 'POST',
                 headers: {
@@ -76,147 +95,37 @@ const RankingRegister = () => {
     return (
         <div>
             <TopHeader />
-            <div className="py-8 px-4 mx-auto max-w-2xl lg:py-16">
-                <h2 className="mb-4 text-xl font-bold text-gray-900 dark:text-white">登録</h2>
-                <form onSubmit={handleSubmit}>
-                    <div className="grid gap-4 sm:grid-cols-2 sm:gap-6">
-                        <div className="sm:col-span-2">
-                            <label for="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">施設名称</label>
-                            <input 
-                                type="text"
-                                name="name"
-                                id="name"
-                                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                placeholder="能美の湯"
-                                value={formData.name}
-                                required
-                                onChange={handleChange}
-                            />
+            <div className="pt-10">
+                <div className="py-8 px-4 mx-auto max-w-2xl lg:py-16">
+                    <h2 className="mb-4 text-xl font-bold text-gray-900 dark:text-white">登録</h2>
+                    <form onSubmit={handleSubmit}>
+                        <div className="grid gap-4 sm:grid-cols-2 sm:gap-6">
+                            {fields.map(field => (
+                                <div key={field.name} className={field.cols ? field.cols : 'w-full'}>
+                                    <label htmlFor={field.name} className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                                        {field.label}{field.max ? ` ${field.max}pt` : ''}
+                                    </label>
+                                    <input
+                                        type={field.type || 'text'}
+                                        name={field.name}
+                                        id={field.name}
+                                        min={field.min}
+                                        max={field.max}
+                                        placeholder={field.placeholder ?? (field.max ? `/${field.max}` : '')}
+                                        value={formData[field.name]}
+                                        onChange={handleChange}
+                                        disabled={field.disabled}
+                                        required={field.name !== 'total'}
+                                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm block w-full p-2.5"
+                                    />
+                                </div>
+                            ))}
                         </div>
-                        <div className="w-full">
-                            <label htmlFor="spa" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">温泉・館内 20pt</label>
-                            <input
-                                type="number"
-                                name="spa"
-                                id="spa"
-                                min={0}
-                                max={20}
-                                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                placeholder="/20"
-                                value={formData.spa}
-                                required
-                                onChange={handleChange}
-                            />
-                        </div>
-                        <div className="w-full">
-                            <label htmlFor="sauna" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">サウナ 15pt</label>
-                            <input
-                                type="number"
-                                name="sauna"
-                                id="sauna"
-                                min={0}
-                                max={15}
-                                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                placeholder="/15"
-                                value={formData.sauna}
-                                required
-                                onChange={handleChange}
-                            />
-                        </div>
-                        <div className="w-full">
-                            <label htmlFor="bedrock" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">岩盤浴 15pt</label>
-                            <input
-                                type="number"
-                                name="bedrock"
-                                id="bedrock"
-                                min={0}
-                                max={15}
-                                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                placeholder="/15"
-                                value={formData.bedrock}
-                                required
-                                onChange={handleChange}
-                            />
-                        </div>
-                        <div>
-                            <label htmlFor="rest" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">休憩所 15pt</label>
-                            <input
-                                type="number"
-                                name="rest"
-                                id="rest"
-                                min={0}
-                                max={15}
-                                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                placeholder="/15"
-                                value={formData.rest}
-                                required
-                                onChange={handleChange}
-                            />
-                        </div>
-                        <div>
-                            <label htmlFor="cost" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">コスト 10pt</label>
-                            <input
-                                type="number"
-                                name="cost"
-                                id="cost"
-                                min={0}
-                                max={10}
-                                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                placeholder="/10"
-                                value={formData.cost}
-                                required
-                                onChange={handleChange}
-                            />
-                        </div>
-                        <div>
-                            <label htmlFor="dining" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">お食事処 10pt</label>
-                            <input
-                                type="number"
-                                name="dining"
-                                id="dining"
-                                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                placeholder="/10"
-                                value={formData.dining}
-                                required
-                                onChange={handleChange}
-                            />
-                        </div>
-                        <div>
-                            <label htmlFor="bonus" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">能美ボーナス 15pt</label>
-                            <input
-                                type="number"
-                                name="bonus"
-                                id="bonus"
-                                min={0}
-                                max={15}
-                                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                placeholder="/15"
-                                value={formData.bonus} 
-                                required
-                                onChange={handleChange}
-                            />
-                        </div>
-                        <div>
-                            <label htmlFor="total" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                                総合点数
-                            </label>
-                            <input
-                                type="number"
-                                name="total"
-                                id="total"
-                                value={formData.total} 
-                                disabled
-                                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                placeholder="/100"
-                                required
-                                onChange={handleChange}
-                            />
-                        </div>
-                    </div>
-                    <button type="submit" className="btn btn-primary w-full inline-flex items-center mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary-700 focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800">
-                        登録
-                    </button>
-                </form>
+                        <button type="submit" className="btn btn-primary w-full inline-flex items-center mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary-700 focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800">
+                            登録
+                        </button>
+                    </form>
+                </div>
             </div>
             <Footer />
         </div>

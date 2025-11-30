@@ -33,9 +33,11 @@ const Movies = () => {
     return (
         <div>
             <TopHeader />
-                {/* スマホの場合縦一列で横幅いっぱい, PC表示の場合縦横5pxずつ開けた3行表示 */}
-                <div className="grid lg:grid-cols-3 sm:grid-cols-1 gap-5 lg:pl-5 lg:pr-5 bg-base-200 pt-5">
-                    {createMovieCardsList()}
+                <div className="pt-10">
+                    {/* スマホの場合縦一列で横幅いっぱい, PC表示の場合縦横5pxずつ開けた3行表示 */}
+                    <div className="grid lg:grid-cols-3 sm:grid-cols-1 gap-5 lg:pl-5 lg:pr-5 bg-base-200 pt-5">
+                        {createMovieCardsList()}
+                    </div>
                 </div>
             <Footer />
         </div>

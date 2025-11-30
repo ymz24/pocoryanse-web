@@ -7,7 +7,7 @@ import Footer from "./Footer";
 
 const Home = () => {
     return (
-        <div>
+        <div className="h-screen">
             <TopHeader />
             <div className="relative">
                 <img

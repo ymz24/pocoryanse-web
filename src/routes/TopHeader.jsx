@@ -11,7 +11,7 @@ const TopHeader = () => {
     };
 
     return (
-        <header>
+        <header className="fixed top-0 left-0 w-full z-50">
             <div className="navbar bg-base-100" style={{ height: "40px", minHeight: "unset" }}>
                 {/* 左寄せ: "Pocoryanse-web" */}
                 <div className="navbar-start">
@@ -54,7 +54,7 @@ const TopHeader = () => {
 
             {/* Drawer */}
             <div
-                className={`fixed inset-0 z-50 bg-black bg-opacity-75 flex flex-col transform transition-all duration-500 ${
+                className={`fixed inset-0 z-60 bg-black bg-opacity-75 flex flex-col transform transition-all duration-500 ${
                     isDrawerOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
                 }`}
             >

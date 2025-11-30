@@ -41,16 +41,28 @@ const HotSprings = () => {
     return (
         <div className="bg-base-200">
             <TopHeader />
-            <Link className="btn btn-primary text-white w-full mt-3" to="/RankingRegister">施設登録</Link>
-            <div className="grid lg:grid-cols-3 sm:grid-cols-1 gap-5 lg:pl-5 lg:pr-5 bg-base-200 pt-5">
-                {rankingData.map((ranking, index) => (
-                    <ScrollAnimation
-                        elem={
-                            <RankingContents key={index} index={index + 1} ranking={ranking} />
-                        }
-                        animation="fade-in-bottom"
-                    />
-                ))}
+            {/* 浮かせた右下のアイコンボタン */}
+            <Link
+                to="/RankingRegister"
+                aria-label="施設登録"
+                className="fixed bottom-5 right-5 z-50 btn glass btn-circle btn-lg shadow-lg"
+            >
+                {/* アイコン: プラス */}
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" />
+                </svg>
+            </Link>
+            <div className="pt-10">
+                <div className="grid lg:grid-cols-3 sm:grid-cols-1 gap-5 lg:pl-5 lg:pr-5 bg-base-200 pt-5">
+                    {rankingData.map((ranking, index) => (
+                        <ScrollAnimation
+                            elem={
+                                <RankingContents key={index} index={index + 1} ranking={ranking} />
+                            }
+                            animation="fade-in-bottom"
+                        />
+                    ))}
+                </div>
             </div>
             <Footer />
         </div>
