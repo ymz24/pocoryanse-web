@@ -32,9 +32,46 @@ const HotSprings = () => {
 
     if (loading) {
         return (
-            <div className="fixed inset-0 flex items-center justify-center bg-gray-100 bg-opacity-50 z-50">
-                <div className="loading loading-ring loading-xl"></div>
-            </div>
+            <>
+                {/* load Material Symbols Outlined (bath_outdoor) */}
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=bath_outdoor" />
+
+                <div className="fixed inset-0 flex items-center justify-center bg-gray-100 bg-opacity-50 z-50">
+                    <div className="relative w-20 h-20" aria-hidden="true">
+                        {/* both icons are positioned absolutely and centered to ensure pixel-perfect alignment */}
+                        <span
+                            className="material-symbols-outlined absolute inset-0 flex items-center justify-center"
+                            style={{ fontSize: 64, lineHeight: 1, color: '#bfc4c9' }}
+                            aria-hidden="true"
+                        >
+                            bath_outdoor
+                        </span>
+
+                        <span
+                            className="material-symbols-outlined absolute inset-0 flex items-center justify-center"
+                            style={{
+                                fontSize: 64,
+                                lineHeight: 1,
+                                color: '#ff3b30',
+                                clipPath: 'inset(100% 0 0 0)',
+                                WebkitClipPath: 'inset(100% 0 0 0)',
+                                animation: 'onsenReveal 1.6s linear infinite'
+                            }}
+                            aria-hidden="true"
+                        >
+                            bath_outdoor
+                        </span>
+                    </div>
+                </div>
+
+                <style>{`
+                    @keyframes onsenReveal {
+                        0% { clip-path: inset(100% 0 0 0); -webkit-clip-path: inset(100% 0 0 0); }
+                        50% { clip-path: inset(0% 0 0 0); -webkit-clip-path: inset(0% 0 0 0); }
+                        100% { clip-path: inset(100% 0 0 0); -webkit-clip-path: inset(100% 0 0 0); }
+                    }
+                `}</style>
+            </>
         );
     }
 

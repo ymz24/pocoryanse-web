@@ -45,7 +45,7 @@ const History = () => {
                     </li>
                     <li>
                         <hr className="bg-primary" />
-                        <div className="timeline-start timeline-box">ウオウオウオ</div>
+                        <div className="timeline-start timeline-box">apmtn</div>
                         <div className="timeline-middle">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +74,7 @@ const History = () => {
                             clipRule="evenodd" />
                         </svg>
                         </div>
-                        <div className="timeline-end timeline-box">apmtn</div>
+                        <div className="timeline-end timeline-box">ウオウオウオ</div>
                         <hr className="bg-primary" />
                     </li>
                     <li>

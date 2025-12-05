@@ -40,7 +40,7 @@ const Footer = () => {
                 </div>
             </nav>
             <aside>
-                <p>v2.01</p><br />
+                <p>v2.02</p><br />
                 <p>Copyright © {new Date().getFullYear()} - All right reserved by Pocoryanse Co.,Ltd.</p>
             </aside>
             

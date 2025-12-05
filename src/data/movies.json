@@ -31,14 +31,14 @@
         "image" : "./images/kamakura.png",
         "title" : "2023 Autumn Petit Trip",
         "season" : "2023年秋",
-        "description" : "関東で大人気の観光地、鎌倉へとゆったり秋旅を満喫します。",
+        "description" : "関東で大人気の観光地、鎌倉へとゆったり秋旅を満喫。",
         "url" : "https://youtu.be/eBxD9-922rE"
     },
     {
         "image" : "./images/yamamoto.png",
         "title" : "山本×岸田ゲーム【神ゲー】",
         "season" : "2024年年始",
-        "description" : "しっぽり飲みの予定でしたが、不意に神ゲーが誕生しました。",
+        "description" : "しっぽり飲みの予定が、不意に神ゲーが誕生。",
         "url" : "https://youtu.be/fqQVJQJiqro"
     },
     {
@@ -59,7 +59,7 @@
         "image" : "./images/24GW.png",
         "title" : "第一回社会人同窓会人狼【VLogもあるヨ！】",
         "season" : "2024年GW",
-        "description" : "同窓会メンバーで糸島へ。夜は定番の人狼ゲームを楽しみます。",
+        "description" : "同窓会メンバーで糸島へ。夜は定番の人狼ゲームを楽しむ。",
         "url" : "https://youtu.be/hcOCKpNWEbY"
     },
     {
@@ -73,21 +73,28 @@
         "image" : "./images/2025NY.png",
         "title" : "DOSOKAI New Year Trip 2025",
         "season" : "2025年年始",
-        "description" : "過去一体を動かした旅行。前日に急遽決定した阿蘇で自然を満喫します。",
+        "description" : "過去一体を動かした旅行。前日に急遽決定した阿蘇で自然を満喫する。",
         "url" : "https://youtu.be/qrIOQURrGjw"
     },
     {
         "image" : "./images/NagoyaMie.png",
         "title" : "Nagoya & Mie Trip by Pocoryanse",
         "season" : "2025年春",
-        "description" : "メンバーで最長の旅行。名古屋と三重のグルメを堪能します。",
+        "description" : "メンバーで最長の旅行。名古屋と三重のグルメを堪能。伝説のあの人も登場。",
         "url" : "https://youtu.be/ppqVMQaxOe4"
     },
     {
         "image" : "./images/MiyazakiRevenge.png",
         "title" : "Miyazaki Trip by Pocoryanse",
         "season" : "2025年GW",
-        "description" : "メンバー全員で宮崎リベンジへ。前回よりさらにグレードアップした旅行をお届けします。",
+        "description" : "メンバー全員で宮崎リベンジへ。前回よりさらにグレードアップした旅行をお届け。",
         "url" : "https://youtu.be/x01nIf4ct8A"
+    },
+    {
+        "image" : "./images/Chushikoku.png",
+        "title" : "Chushikoku Trip by Pocoryanse",
+        "season" : "2025年夏",
+        "description" : "移動距離が過去最高の旅行。中国・四国地方への島の旅でダンス部が発足する。",
+        "url" : "https://youtu.be/kUwImqp2GDM"
     }
 ]
