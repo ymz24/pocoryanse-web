@@ -1,4 +1,5 @@
 import React from "react";
+import { CONFIG } from "../const";
 import "../App.css";
 import { useState } from "react";
 
@@ -40,7 +41,7 @@ const Footer = () => {
                 </div>
             </nav>
             <aside>
-                <p>v2.02</p><br />
+                <p>{CONFIG.VERSION}</p><br />
                 <p>Copyright © {new Date().getFullYear()} - All right reserved by Pocoryanse Co.,Ltd.</p>
             </aside>
             

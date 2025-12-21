@@ -3,7 +3,7 @@ import { useState } from 'react';
 // import { writeFile } from 'fs';
 import TopHeader from './TopHeader';
 import Footer from './Footer';
-import { API_URL } from '../const';
+import { CONFIG } from '../const';
 
 // 初期状態を定義
 const initialState = {
@@ -63,7 +63,7 @@ const RankingRegister = () => {
             }, {});
 
             const params = new URLSearchParams(payload).toString();
-            const response = await fetch(API_URL, {
+            const response = await fetch(CONFIG.API_URL, {
                 method: 'POST',
                 headers: {
                     "Accept": "application/json",

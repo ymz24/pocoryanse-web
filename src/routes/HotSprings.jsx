@@ -6,14 +6,14 @@ import TopHeader from "./TopHeader";
 import Footer from "./Footer";
 import ScrollAnimation from "./components/ScrollAnimation";
 import RankingContents from "./components/RankingContents";
-import { API_URL } from "../const";
+import { CONFIG } from "../const";
 
 const HotSprings = () => {
     const [rankingData, setRankingData] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch(API_URL)
+        fetch(CONFIG.API_URL)
             .then(response => response.json())
             .then(data => {
                 // data は google sheets の全データ（配列の配列）と仮定
@@ -33,9 +33,6 @@ const HotSprings = () => {
     if (loading) {
         return (
             <>
-                {/* load Material Symbols Outlined (bath_outdoor) */}
-                <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=bath_outdoor" />
-
                 <div className="fixed inset-0 flex items-center justify-center bg-gray-100 bg-opacity-50 z-50">
                     <div className="relative w-20 h-20" aria-hidden="true">
                         {/* both icons are positioned absolutely and centered to ensure pixel-perfect alignment */}

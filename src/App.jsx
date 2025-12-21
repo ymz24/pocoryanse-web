@@ -7,6 +7,7 @@ import Home from "./routes/Home";
 import History from "./routes/History";
 import Movies from "./routes/Movies";
 import HotSprings from "./routes/HotSprings";
+import Others from "./routes/Others";
 import RankingRegister from "./routes/RankingRegister";
 
 function App() {
@@ -17,8 +18,8 @@ function App() {
         <Route path="/history" element={ <History /> } />
         <Route path="/Movies" element={ <Movies /> } />
         <Route path="/HotSprings" element={ <HotSprings /> } />
+        <Route path="/others" element={ <Others /> } />
         <Route path="/RankingRegister" element={ <RankingRegister /> } />
-        {/* ここに他のルートを追加できます */}
       </Routes>
     </BrowserRouter>
   );
