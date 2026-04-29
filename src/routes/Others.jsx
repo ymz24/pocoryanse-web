@@ -13,55 +13,162 @@ const Others = () => {
     ];
 
     return (
-        <div className="bg-base-200 min-h-screen">
+        <div className="bg-[#f5f5f7] min-h-screen">
             <TopHeader />
-            <div className="pt-10">
-                <div className="py-8 px-4 mx-auto max-w-6xl lg:py-16">
-                    <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-                        Others
-                    </h1>
-                    <p className="text-lg text-gray-600 dark:text-gray-400 mb-12">
-                        Opening & Ending Collection
-                    </p>
+            <main className="pt-16 pb-24">
+                <div className="max-w-5xl mx-auto px-5 md:px-10">
+                    {/* タイトル */}
+                    <header className="mb-12 md:mb-16">
+                        <p
+                            className="text-[11px] uppercase mb-3"
+                            style={{ letterSpacing: "0.22em", color: "#86868b", fontWeight: 500 }}
+                        >
+                            Archive
+                        </p>
+                        <h1
+                            className="text-4xl md:text-6xl"
+                            style={{
+                                fontWeight: 600,
+                                letterSpacing: "-0.035em",
+                                color: "#1d1d1f"
+                            }}
+                        >
+                            Others
+                        </h1>
+                        <p
+                            className="mt-3 text-base md:text-lg"
+                            style={{ color: "#6e6e73", fontWeight: 300, letterSpacing: "-0.005em" }}
+                        >
+                            Opening &amp; Ending Collection
+                        </p>
+                    </header>
 
-                    {/* Video links grid: 1 column on mobile, 2-3 on larger screens */}
-                    <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                        {videos.map((video) => (
+                    {/* 上部ヘアライン */}
+                    <div className="h-px bg-black/[0.08]" />
+
+                    {/* 年ごとのリスト */}
+                    <ul className="divide-y divide-black/[0.08]">
+                        {videos.map((video, idx) => (
                             <ScrollAnimation
                                 key={video.year}
-                                elem={
-                                    <a
-                                        href={video.url}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="card bg-base-100 shadow-lg hover:shadow-2xl transition-shadow cursor-pointer"
-                                    >
-                                        <div className="card-body items-center text-center">
-                                            <h2 className="card-title text-3xl font-bold text-primary">
-                                                {video.year}
-                                            </h2>
-                                            <p className="text-gray-600 text-sm mt-2">
-                                                Click to watch on YouTube
-                                            </p>
-                                            <div className="mt-4">
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    className="h-8 w-8 text-red-500"
-                                                    viewBox="0 0 24 24"
-                                                    fill="currentColor"
-                                                >
-                                                    <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </a>
-                                }
                                 animation="fade-in-bottom"
+                                elem={
+                                    <li>
+                                        <a
+                                            href={video.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="others-row"
+                                            aria-label={`Watch ${video.year} on YouTube`}
+                                        >
+                                            {/* 番号 */}
+                                            <span className="others-row__num">
+                                                {String(idx + 1).padStart(2, "0")}
+                                            </span>
+
+                                            {/* 年 (大きいタイポ) */}
+                                            <span className="others-row__year">
+                                                {video.year}
+                                            </span>
+
+                                            {/* 説明 */}
+                                            <span className="others-row__meta">
+                                                <span className="others-row__label">YouTube</span>
+                                                <span className="others-row__sub">Opening &amp; Ending</span>
+                                            </span>
+
+                                            {/* 矢印 */}
+                                            <span className="others-row__arrow" aria-hidden="true">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M7 17L17 7M9 7h8v8" />
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </li>
+                                }
                             />
                         ))}
-                    </div>
+                    </ul>
                 </div>
-            </div>
+            </main>
+
+            <style>{`
+                .others-row {
+                    display: grid;
+                    grid-template-columns: 44px 1fr auto auto;
+                    align-items: center;
+                    gap: 16px;
+                    padding: 28px 0;
+                    color: #1d1d1f;
+                    text-decoration: none;
+                    transition: padding 0.3s cubic-bezier(.2,.8,.2,1);
+                }
+                .others-row:hover {
+                    padding-left: 8px;
+                    padding-right: 8px;
+                }
+                .others-row__num {
+                    font-size: 11px;
+                    letter-spacing: 0.18em;
+                    color: #86868b;
+                    font-weight: 500;
+                    font-feature-settings: "tnum" on;
+                }
+                .others-row__year {
+                    font-size: clamp(40px, 8vw, 88px);
+                    font-weight: 600;
+                    letter-spacing: -0.045em;
+                    line-height: 1;
+                    color: #1d1d1f;
+                    transition: color 0.3s ease;
+                }
+                .others-row:hover .others-row__year {
+                    color: #0a84ff;
+                }
+                .others-row__meta {
+                    display: none;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    gap: 2px;
+                    text-align: right;
+                }
+                @media (min-width: 640px) {
+                    .others-row__meta { display: flex; }
+                }
+                .others-row__label {
+                    font-size: 11px;
+                    letter-spacing: 0.18em;
+                    text-transform: uppercase;
+                    color: #86868b;
+                    font-weight: 500;
+                }
+                .others-row__sub {
+                    font-size: 13px;
+                    color: #424245;
+                    font-weight: 400;
+                }
+                .others-row__arrow {
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 9999px;
+                    background: rgba(0,0,0,0.03);
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #86868b;
+                    transition: background 0.25s ease, color 0.25s ease, transform 0.3s cubic-bezier(.2,.8,.2,1);
+                }
+                .others-row__arrow svg {
+                    width: 14px;
+                    height: 14px;
+                }
+                .others-row:hover .others-row__arrow {
+                    background: #1d1d1f;
+                    color: #ffffff;
+                    transform: rotate(0deg) scale(1.05);
+                }
+            `}</style>
+
             <Footer />
         </div>
     );
