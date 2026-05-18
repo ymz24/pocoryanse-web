@@ -41,12 +41,19 @@ const RankingCard = ({ ranking, index, items, accentGradient }) => {
                         </span>
                     </div>
                     <div className="min-w-0 flex-1">
-                        <h2
-                            className="text-lg sm:text-2xl md:text-[28px] truncate"
-                            style={{ fontWeight: 600, letterSpacing: "-0.025em", color: "#1d1d1f" }}
+                        <a
+                            href={`https://www.google.com/search?q=${encodeURIComponent(ranking.name)}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block min-w-0 flex-1"
                         >
-                            {ranking.name}
-                        </h2>
+                            <h2
+                                className="text-lg sm:text-2xl md:text-[28px] truncate"
+                                style={{ fontWeight: 600, letterSpacing: "-0.025em", color: "#1d1d1f" }}
+                            >
+                                {ranking.name}
+                            </h2>
+                        </a>
                     </div>
                 </div>
 

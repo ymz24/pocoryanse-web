@@ -116,7 +116,7 @@ const Footer = () => {
                                 "yan_kaz0110",
                                 "yananaya01",
                                 "0oclock.sh",
-                                "cgvpsh",
+                                "shoya._viz",
                                 "ay_mu_3",
                                 "nohmin_min_914",
                                 "mitaniiiss"

@@ -14,7 +14,7 @@ const RankingFormPage = ({ config }) => {
     // 初期 state を items から動的生成
     const initialState = useMemo(() => {
         const base = { name: "", total: 0 };
-        config.items.forEach((it) => { base[it.key] = 0; });
+        config.items.forEach((it) => { base[it.key] = ""; });
         return base;
     }, [config]);
 
@@ -199,6 +199,7 @@ const RankingFormPage = ({ config }) => {
                                                     id={field.name}
                                                     min={field.min}
                                                     max={field.max}
+                                                    placeholder="0"
                                                     value={formData[field.name]}
                                                     onChange={handleChange}
                                                     required
