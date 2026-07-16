@@ -96,5 +96,12 @@
         "season" : "2025年夏",
         "description" : "移動距離が過去最高の旅行。中国・四国地方への島の旅でダンス部が発足する。",
         "url" : "https://youtu.be/kUwImqp2GDM"
+    },
+    {
+        "image" : "./images/Senzan.png",
+        "title" : "Sendai & Yamagata Trip by Pocoryanse",
+        "season" : "2026年春",
+        "description" : "初の東北地方へ。アラサーになったメンバーは老いを感じながらも、温泉とグルメを満喫する。",
+        "url" : "https://youtu.be/W405tm7PpMQ"
     }
 ]
